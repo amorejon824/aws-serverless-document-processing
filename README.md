@@ -34,8 +34,43 @@ This reduces backend load, improves scalability, and aligns with real-world clou
 
 ## 📸 Screenshots
 
-(Add your screenshots here)
+### 1. API Gateway Routes
+Shows the application entry points:
+- `POST /documents`
+- `GET /documents/{id}`
 
+![API Gateway](screenshots/api-gateway.png)
+
+---
+
+### 2. S3 Event Trigger
+Uploads bucket configured to trigger processing Lambda on object creation.
+
+![S3 Trigger](screenshots/s3-trigger.png)
+
+---
+
+### 3. DynamoDB Status (Completed)
+Document successfully processed and status updated to `completed`.
+
+![DynamoDB](screenshots/dynamodb.png)
+
+---
+
+### 4. Lambda Functions
+Separation of responsibilities across:
+- create document
+- process upload
+- get status
+
+![Lambda Functions](screenshots/lambda-functions.png)
+
+---
+
+### 5. Lambda Execution Logs
+Proof of real-time processing triggered by S3 event.
+
+![Lambda Logs](screenshots/lambda-logs.png)
 ## 🧠 What I Learned
 
 - Designing event-driven architectures
